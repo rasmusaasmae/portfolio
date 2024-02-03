@@ -1,16 +1,11 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import localFont from 'next/font/local';
 
 import { cn } from '@/lib/utils';
 
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
-const menlo = localFont({
-  src: '../fonts/Menlo-Regular.woff',
-  variable: '--font-menlo',
-});
 
 export const metadata: Metadata = {
   title: 'Rasmus',
@@ -24,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, menlo.variable)}>{children}</body>
+      <body
+        className={cn(inter.className, 'text-white bg-gray-950 min-h-screen')}
+      >
+        {children}
+      </body>
     </html>
   );
 }
