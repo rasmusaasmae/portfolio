@@ -6,10 +6,10 @@ function CloseButton(props: {}) {
   return (
     <button
       disabled
-      className="w-3 h-3 rounded-full bg-[#d9515d] grid place-content-center"
+      className="grid h-3 w-3 place-content-center rounded-full bg-[#d9515d]"
     >
       <X
-        className="w-2 h-2 text-black group-hover:opacity-80 opacity-0"
+        className="h-2 w-2 text-black opacity-0 group-hover:opacity-80"
         strokeWidth={4}
       />
     </button>
@@ -19,10 +19,10 @@ function MinimizeButton(props: {}) {
   return (
     <button
       disabled
-      className="w-3 h-3 rounded-full bg-[#f4c025] grid place-content-center"
+      className="grid h-3 w-3 place-content-center rounded-full bg-[#f4c025]"
     >
       <Minus
-        className="w-2 h-2 group-hover:opacity-80 text-black opacity-0"
+        className="h-2 w-2 text-black opacity-0 group-hover:opacity-80"
         strokeWidth={4}
       />
     </button>
@@ -32,10 +32,10 @@ function MaximizeButton(props: {}) {
   return (
     <button
       disabled
-      className="w-3 h-3 rounded-full bg-[#3ec930] grid place-content-center"
+      className="grid h-3 w-3 place-content-center rounded-full bg-[#3ec930]"
     >
       <Maximize2
-        className="w-2 h-2 group-hover:opacity-80 text-black opacity-0"
+        className="h-2 w-2 text-black opacity-0 group-hover:opacity-80"
         strokeWidth={4}
       />
     </button>
@@ -43,7 +43,7 @@ function MaximizeButton(props: {}) {
 }
 function Buttons(props: {}) {
   return (
-    <div className="flex flex-row space-x-2 group">
+    <div className="group flex flex-row space-x-2">
       <CloseButton />
       <MinimizeButton />
       <MaximizeButton />
@@ -54,10 +54,10 @@ function Title(props: { dirName: string }) {
   const { dirName } = props;
   return (
     <div className="text-sm font-semibold opacity-70">
-      <FolderClosed className="inline w-4 h-4 mr-1" strokeWidth={3} />
+      <FolderClosed className="mr-1 inline h-4 w-4" strokeWidth={3} />
       <span>
         {dirName} — -zsh — 80
-        <X className="inline w-3 h-3" strokeWidth={4} />
+        <X className="inline h-3 w-3" strokeWidth={4} />
         24
       </span>
     </div>
@@ -71,7 +71,7 @@ export default function TerminalHeader(props: {
   return (
     <div
       className={cn(
-        'w-full h-7 border-b border-b-black bg-[#353637] flex flex-row items-center justify-between px-2',
+        'flex h-7 w-full flex-row items-center justify-between border-b border-b-black bg-[#353637] px-2',
         `${isFocused ? '' : 'bg-[#252627]'}`,
       )}
     >

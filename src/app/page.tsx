@@ -4,9 +4,9 @@ import HackerText from '@/components/hacker-text';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center">
+    <main className="flex min-h-screen flex-col items-center justify-center">
       <section className="flex flex-col items-center space-y-4">
-        <h1 className="text-6xl font-bold text-center">who are you?</h1>
+        <h1 className="text-center text-6xl font-bold">who are you?</h1>
         <div className="flex flex-row space-x-6 text-xl">
           <Link href="/gamer" className="pointer-events-none">
             gamer

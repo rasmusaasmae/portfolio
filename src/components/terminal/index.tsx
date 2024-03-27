@@ -139,10 +139,10 @@ export default function Terminal(props: {}) {
   return (
     <div
       ref={wrapperRef}
-      className="flex flex-col max-w-[36rem] max-h-96 aspect-[3/2] w-full border rounded-md border-t-[#757677] border-[#4b4b4b] bg-[#1e1e1e]"
+      className="flex aspect-[3/2] max-h-96 w-full max-w-[36rem] flex-col rounded-md border border-[#4b4b4b] border-t-[#757677] bg-[#1e1e1e]"
     >
       <TerminalHeader isFocused={isFocused} dirName={path[path.length - 1]} />
-      <ScrollArea className="flex-grow my-1 px-1">
+      <ScrollArea className="my-1 flex-grow px-1">
         <TerminalContent lines={lines} />
         <TerminalEditor
           editorValue={editorValue}

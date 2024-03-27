@@ -21,6 +21,7 @@ export default function TerminalEditor(props: {
     const span = document.createElement('span');
     span.style.visibility = 'hidden';
     span.style.position = 'absolute';
+    span.style.whiteSpace = 'pre-wrap';
     span.style.fontSize = window.getComputedStyle(wrapper).fontSize;
     span.style.fontFamily = window.getComputedStyle(wrapper).fontFamily;
     span.innerText = editorValue.slice(caretIndex);
@@ -31,7 +32,10 @@ export default function TerminalEditor(props: {
   }, [editorValue, caretIndex]);
 
   return (
-    <div id="terminalEditorWrapper" className="w-full font-mono text-sm">
+    <div
+      id="terminalEditorWrapper"
+      className="w-full whitespace-pre-wrap font-mono text-sm"
+    >
       {prompt} {editorValue}
       <span className="opacity-50">
         <span
