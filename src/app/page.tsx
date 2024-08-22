@@ -8,12 +8,7 @@ export default function Home() {
       <section className="flex flex-col items-center space-y-4">
         <h1 className="text-center text-6xl font-bold">who are you?</h1>
         <div className="flex flex-row space-x-6 text-xl">
-          <Link href="/gamer" className="pointer-events-none">
-            gamer
-          </Link>
-          <Link href="/normal" className="pointer-events-none">
-            &apos;normal&apos;
-          </Link>
+          <Link href="/biologist">biologist</Link>
           <Link href="/hacker">
             <HackerText />
           </Link>
