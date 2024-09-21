@@ -2,7 +2,13 @@
 
 import { useRef } from 'react';
 
-export default function HackerText() {
+export default function HackerText({
+  text,
+  speed = 0.25,
+}: {
+  text: string;
+  speed?: number;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
 
   function handleHackerHover() {
@@ -20,7 +26,7 @@ export default function HackerText() {
       if (iterations >= (ref.current.dataset.value?.length ?? 10))
         clearInterval(interval);
 
-      iterations += 1 / 4;
+      iterations += speed;
     }, 30);
   }
 
@@ -29,9 +35,9 @@ export default function HackerText() {
       ref={ref}
       className="font-mono"
       onMouseOver={handleHackerHover}
-      data-value="hacker"
+      data-value={text}
     >
-      hacker
+      {text}
     </span>
   );
 }
