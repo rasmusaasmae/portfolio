@@ -7,13 +7,6 @@ export default function Sport(props: {}) {
         tennis, and more.
       </p>
       <div className="flex flex-col">
-        <h2 className="text-lg text-[#756bbb] sm:text-xl">Football</h2>
-        <p>
-          I&apos;ve played for various teams including JK Nõmme Kalju, FC Nõmme
-          United, and Saku Sporting.
-        </p>
-      </div>
-      <div className="flex flex-col">
         <h2 className="text-lg text-[#756bbb] sm:text-xl">Running</h2>
         <table className="table-auto text-sm">
           <thead className="border-b border-gray-600">
@@ -75,7 +68,7 @@ export default function Sport(props: {}) {
           Military Pentathon
         </h2>
         <p>
-          I represented the Cyber Command in the Military Pentathlon, where I
+          I represented Cyber Command in the Military Pentathlon, where I
           competed in a variety of challenging events. I finished 7th out of 73
           competitors, making it a memorable and rewarding experience.
         </p>
